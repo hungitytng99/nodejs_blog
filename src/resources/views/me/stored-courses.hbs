@@ -15,7 +15,8 @@
             </select>
         </div>
 
-        <button class="btn btn-primary btn-sm check-all-submit-btn magrin-checkbox-submit" disabled="disabled">Thực hiện</button>
+        <button class="btn btn-primary btn-sm check-all-submit-btn magrin-checkbox-submit" disabled="disabled">Thực
+            hiện</button>
 
     </div>
 
@@ -24,9 +25,15 @@
             <tr>
                 <th scope="col"></th>
                 <th scope="col">#</th>
-                <th scope="col">Tên khóa học</th>
-                <th scope="col">Trình độ</th>
-                <th scope="col" colspan="5">Thời gian tạo</th>
+                <th scope="col">Tên khóa học
+                    {{{sortable 'name' _sort}}}
+                </th>
+                <th scope="col">Trình độ
+                    {{{sortable 'level' _sort}}}
+                </th>
+                <th scope="col" colspan="5">Thời gian tạo
+                    {{{sortable 'createdAt' _sort}}}
+                </th>
 
             </tr>
         </thead>
@@ -128,7 +135,7 @@
             if (checkedCount > 0) {
                 checkAllSubmitBtn.attr('disabled', false);
             } else {
-                 checkAllSubmitBtn.attr('disabled', true);
+                checkAllSubmitBtn.attr('disabled', true);
             }
         }
     });
